@@ -1,0 +1,25 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container justify-content-end">
+    <div class="float-right formLogin">
+      <form [formGroup]="loginForm">
+        <!--<pre>{{ loginForm.value | json }}</pre>-->
+      <h2>INGRESO PARA SOCIOS</h2>
+      <input  type="text" class="form-control"
+              placeholder="Nombre de usuario"
+              formControlName="user">
+      <input  type="password" class="form-control"
+              placeholder="Contraseña"
+              formControlName="password">
+      <button class="submitLogin" (click)="login()">INGRESAR</button>
+      </form>
+      <div class="bottom">
+          <input type="submit" class="getPlan" value="SOLICITAR PLAN">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row separaLila" style="margin-right:0px">
+  <div class="container text-center p-3">
+    <h2>0810-444-8800 <span>| Consulte por nuestros planes</span></h2></div>
+</div>
