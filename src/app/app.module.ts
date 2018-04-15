@@ -11,6 +11,15 @@ import { ArticulosComponent } from './components/articulos/articulos.component';
 
 
 import { LoginService } from './services/login.service';
+import { UserService } from './services/user.service';
+
+import { app_routing } from './app.routes';
+
+import { HomeComponent } from './components/home/home.component';
+import { HomeUserComponent } from './user/home-user/home-user.component';
+import { MisionComponent } from './mision/mision.component';
+import { PlanComponent } from './planes/plan.component';
+import { ArticuloComponent } from './articulos/articulo.component';
 
 @NgModule({
   declarations: [
@@ -18,14 +27,20 @@ import { LoginService } from './services/login.service';
     NabvarComponent,
     SliderComponent,
     PlanesComponent,
-    ArticulosComponent
+    ArticulosComponent,
+    HomeComponent,
+    HomeUserComponent,
+    MisionComponent,
+    PlanComponent,
+    ArticuloComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    app_routing,
   ],
-  providers: [ LoginService ],
+  providers: [ LoginService, UserService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

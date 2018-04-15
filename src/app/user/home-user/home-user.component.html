@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <h1>Bienvenido {{userName}}</h1>
+  </div>
+
+  <hr>
+
+  <div class="row">
+    <div class="col-12">
+
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active" aria-current="page">Datos de la mascota</li>
+        </ol>
+      </nav>
+
+    </div>
+  </div>
+
+  <div class="row" *ngFor="let pet of pets">
+    <div class="col-2">
+      <img src="http://mascotas.com/images/pets/{{pet.images_pets[1].name}}" class="w-100" alt="">
+    </div>
+    <div class="col-10">
+      <ul class="list-group">
+        <li class="list-group-item active">{{pet.name}}</li>
+        <li class="list-group-item">Tipo: {{pet.type}}</li>
+        <li class="list-group-item">Raza: {{pet.raza}}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active" aria-current="page">Visitas al veterinario</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+</div>
