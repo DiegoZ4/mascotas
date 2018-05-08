@@ -1,25 +1,39 @@
 <div class="jumbotron jumbotron-fluid">
   <div class="container justify-content-end">
     <div class="float-right formLogin">
-      <form [formGroup]="loginForm">
-        <!--<pre>{{ loginForm.value | json }}</pre>-->
-      <h2>INGRESO PARA SOCIOS</h2>
-      <input  type="text" class="form-control"
-              placeholder="Nombre de usuario"
-              formControlName="user">
-      <input  type="password" class="form-control"
-              placeholder="Contraseña"
-              formControlName="password">
-      <button class="submitLogin" (click)="login()">INGRESAR</button>
-      </form>
-      <div class="bottom">
-          <input type="submit" class="getPlan" value="SOLICITAR PLAN">
-      </div>
+
+      <div class="domicilio"></div>
     </div>
   </div>
 </div>
 
+<div class="separaAtencion" style="margin-right:0px; display:none">
+  <img src="/assets/img/atencionMobil.jpg" alt="">
+</div>
+
 <div class="row separaLila" style="margin-right:0px">
   <div class="container text-center p-3">
-    <h2>0810-444-8800 <span>| Consulte por nuestros planes</span></h2></div>
+    <h2>0810-220-Mascotas(6272) <span><span class="mobilDelete">|</span> Consulte por nuestros planes</span></h2></div>
+</div>
+
+<div class="row separaGris" style="margin-right:0px">
+  <div class="container text-center p-3">
+    <div class="row">
+      <div class="col-3 color-assist2">
+        <b>Información</b><br>
+        <a class="color-assist2" href="mailto:info@assistpet.com.ar">info@assistpet.com.ar</a>
+      </div>
+      <div class="col-3 color-assist2">
+        <b>Ventas</b><br>
+        <a class="color-assist2" href="mailto:ventas@assistpet.com.ar">ventas@assistpet.com.ar</a>
+      </div>
+      <div class="col-3 color-assist2">
+        <b>Administración</b><br>
+        <a class="color-assist2" href="mailto:administración@assistpet.com.ar">administración@assistpet.com.ar</a>
+      </div>
+      <div class="col-3 color-assist2 text-center">
+        <a href="https://www.facebook.com/AssistPet/" target="_blank"><img src="/assets/img/fb.png" width="50" class="img-fluid ml-4" alt="..."></a>
+        <a href="https://www.instagram.com/assist_pet/" target="_blank"><img src="/assets/img/ins.png" width="50" class="img-fluid ml-1" alt="..."></a>
+      </div>
+    </div>
 </div>

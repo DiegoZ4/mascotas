@@ -1,3 +1,30 @@
-<p>
-  articulo works!
-</p>
+<hr class="pt-0 mt-0 mb-5">
+<div class="container">
+  <div class="text-center color-assist volantaInfo">{{ articleData.category.name }} <span *ngIf="articleData.category">|</span> {{ articleData.volanta}}</div>
+  <h1 class="text-center display-4 color-assist2 tituloInfo">{{ articleData.title }}</h1>
+  <h4 class="text-center mb-5">{{ articleData.desc}}</h4>
+
+  <hr class="pb-4">
+
+  <div class="w-75 m-auto articuloInfo">
+    <img width="350" *ngIf="articleData.images.length >= 1" src="http://assistpet.com.ar/images/articles/{{articleData.images[0].name}}" class="img-fluid pull-xs-left pr-3">
+    <div innerHTML="{{articleData.content}}"></div>
+  </div>
+
+  <hr class="mb-5 mt-5">
+
+  <h4 class="color-assist2 mb-3">Últimos articulos</h4>
+
+  <div class="card-deck mb-5">
+    <div class="card" *ngFor="let article of articles | slice:0:3 ">
+      <!--<div *ngIf="i <= 2">-->
+        <img *ngIf="article.images.length >= 1" class="card-img-top" src="http://assistpet.com.ar/images/articles/{{article.images[0].name}}" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title color-assist2">{{ article.title }}</h4>
+          <p class="card-text">{{ article.title }}</p>
+          <a routerLink="/articulo/{{ article.id }}" class="card-link color-assist2">Ir al enlace</a>
+        </div>
+      <!--</div>-->
+    </div>
+  </div>
+</div>

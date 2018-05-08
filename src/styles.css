@@ -1,11 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 body{font-family: 'Open Sans', sans-serif;}
 
-.form-inline a{color:#a809a6 !important}
+.logoNav{cursor:pointer;margin-right:139px}
+.loginField{float: left;}
+
+.form-inline a, .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-toggler-icon{color:#a809a6 !important; fill:#a809a6 !important}
 
 .jumbotron{background-image: url(/assets/img/slider1.jpg); height: 552px; background-position: center; margin-bottom: 0px}
 
-.formLogin{ background: #a809a6; width: 305px; border-radius: 10px; border-radius: 15px !important}
+.formLogin{ position: relative;}
 .formLogin h2 {
                 font-size: 21px;
                 font-weight: 600;
@@ -38,28 +41,106 @@ body{font-family: 'Open Sans', sans-serif;}
     opacity: 1; /* Firefox */
 }
 
+.dropForm{left: -165px; width: 340px}
+.dropdown-item{padding: .25rem 1.4rem 2.3rem !important}
+.w100{width: 100px !important}
+.spanNav {position: relative; top: -6px}
+.dropdown-toggle::after{top: -5px; position: relative}
+
+.domicilio{background-image: url(/assets/img/domicilio.png); width: 578px; height: 155px; position: absolute; right: -10px; top: 110px}
 
 .separaLila{background: #a809a6; color: white;}
 .separaLila h2{font-weight: 700}
 .separaLila h2 span{font-weight: 200}
 
+.separaGris{background: #e4E4E4; margin: 0px}
+
 
 .planes{ color: #a809a6; margin-bottom: 50px}
-.plan{ width: 200px; height: 200px; border-radius: 200px; background: #7777ef; margin: auto; position: relative;}
+.plan{ width: 200px; border-radius: 200px; margin: auto; position: relative;}
 .plan .imgPlan{ z-index: 1; position: relative; top: 40px}
-.plan .nombrePlan{ background: #ef77df; border-radius: 10px !important; font-family: 'Montserrat'; font-weight: 600; font-size: 25px; color: white; position: absolute; bottom: 0px; padding: 8px 20px; text-align: center; width: 200px; z-index: 0}
-.descPlan{ width: 200px; height: auto; margin: 15px auto; color: #a809a6; text-align: center;}
+.nombrePlan{ border-radius: 10px !important; font-family: 'Montserrat'; font-weight: 600; font-size: 25px; color: white; padding: 8px 20px; text-align: center; width: 220px; margin: 15px auto}
+.descPlan{ width: 280px; height: auto; margin: 15px auto; color: #a809a6; text-align: center;}
 .planes .btn-assist{background: #a809a6; color: white; margin-bottom: 20px}
+.planA{max-width: 380px}
+.planB{max-width: 320px; padding-top: 50px}
+.planC{max-width: 360px}
+.nombrePlanA{ background: #ef77df;}
+.nombrePlanB{ background: #ef7796;}
+.nombrePlanC{ background: #af77ef;}
 
+.colInfoPlan{padding-top: 30px}
+.nombrePlanInterior{font-family: 'Montserrat'; font-weight: 600; font-size: 25px; color: white; padding: 8px 20px; text-align: center;}
+.descPlanInterior{ color: #a809a6; font-size: 12pt}
+.descPlanInterior .item{ background-image: url(/assets/img/pata.jpg); padding-left: 35px; background-repeat: no-repeat; margin-top: 25px}
+.btnPlan{margin-top: 35px;}
 .greysama{background: #e3e3e3}
 
 .articulos{ color: #a809a6}
+.img-fluid{float: left;}
+.volantaInfo{font-size: 14pt; text-transform: uppercase; margin-bottom: 12px}
+.tituloInfo {margin-bottom: 15px}
 
 
 .btn-assist{background: #a809a6; color: white}
+.btn-assist2{background: #fd78e5; color: white}
 .table-assist{background: #a809a6; color: white}
 .cel-assist2{background: #fd78e5}
+.color-assist{color:#fd78e5}
+.color-assist2{color:#a809a6}
+
+app-contacto .jumbotron, app-solicitar .jumbotron{ background-position: center; background-size: cover}
 
 @media (min-width: 1200px){
-  .planes{ max-width: 860px !important}
+  .planes{ max-width: 1050px !important}
+}
+
+app-articulos-home a, app-articulos a{color: #a809a6 !important}
+
+
+/*Mobil Style*/
+@media (max-width: 450px){
+  .navbar-toggler{margin-top: 14px}
+  .navbar-nav{border-top:1px solid #a809a6; margin-top: 15px; padding-top: 12px !important}
+  .logoNav{ width: 250px; margin-right:0px}
+
+  .planes h1, .articulos h1{font-size: 18pt}
+
+  .planes img{width: 100%}
+  .planA,.planB,.planC{ margin: auto; padding-top: 0px; border-bottom: 1px solid #fd78e5; padding-bottom: 10px; margin-bottom: 10px}
+
+  app-slider .jumbotron{height: 250px; background-image: url(/assets/img/jumboHomeMobil.jpg); background-position: center; background-size: cover}
+  .domicilio{display: none}
+
+  .separaLila{background: #ef7796; margin: 0px}
+  .separaLila h2{font-size: 1.5rem; text-align: center; }
+  .separaAtencion {display: block !important}
+  .separaAtencion img{width: 100%}
+
+  .separaGris{background: #e4E4E4; margin: 0px}
+  .separaGris .col-3{max-width: 100%; text-align: center; margin-bottom: 12px; flex:none}
+  .separaGris .col-3 .img-fluid{ margin: 5px 0px 0px !important; float: none}
+
+  .homeIcon{display: none !important}
+
+
+  app-mision .jumbotron, app-planes-home .jumbotron, app-contacto .jumbotron, app-solicitar .jumbotron{height: 250px !important; background-position: center; background-size: cover}
+
+  app-plan .container{padding-top: 0px !important}
+  app-plan .col-4, app-plan .col-7, app-plan .col-6{max-width: 100%; flex: none}
+  .btnPlan{margin-top: 3px}
+  .descPlanInterior{ margin-bottom: 30px}
+  .planesHomeTit{margin-bottom: 15px !important}
+  .imgPlan {width: 100%}
+
+  .tituloInfo{font-size: 31pt}
+  app-articulo h4{font-size: 13pt; line-height: 1.4}
+  .articuloInfo{width: 100% !important}
+  .articuloInfo img{margin-bottom: 15px}
+
+  .mobilDelete{display: none !important}
+}
+
+@media (max-width: 320px){
+  .logoNav{ width: 200px; margin-right:0px}
 }

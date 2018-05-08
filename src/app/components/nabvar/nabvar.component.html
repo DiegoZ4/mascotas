@@ -1,24 +1,95 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light bg-white">
+<!--<nav class="navbar navbar-expand-lg navbar-light bg-light bg-white">
   <div class="container">
 
     <img style="cursor:pointer" routerLink="/" src="assets/img/logo.jpg" alt="AssistPet">
 
     <div class="form-inline">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav mt-4">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/"><i class="material-icons">home</i></a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/mision">Nuestra misión</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Nuestros Planes</a>
+          <a class="nav-link" routerLink="/planes">Nuestros Planes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Artículos</a>
+          <a class="nav-link" routerLink="/articulos">Artículos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contacto</a>
+          <a class="nav-link" routerLink="/contacto">Contacto</a>
         </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="material-icons">person</i> <span class="spanNav">Ingreso Socios</span>
+        </a>
+        <div class="dropdown-menu dropForm" aria-labelledby="navbarDropdown">
+          <div class="dropdown-item">
+            <form [formGroup]="loginForm">
+
+            <input  type="text" class="form-control form-control-sm w100"
+                    placeholder="Nombre de usuario"
+                    formControlName="user">
+            <input  type="password" class="form-control form-control-sm w100"
+                    placeholder="Contraseña"
+                    formControlName="password">
+            <button class="submitLogin btn btn-assist btn-sm" (click)="login()">INGRESAR</button>
+            </form>
+          </div>
+        </div>
+      </li>
       </ul>
     </div>
 
   </div>
 </nav>
+-->
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light bg-white">
+  <div class="container">
+  <a class="navbar-brand" routerLink="/" ><img class="logoNav" routerLink="/" src="assets/img/logo.jpg" alt="AssistPet"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav" style="padding-top:30px">
+      <li class="nav-item">
+        <a class="nav-link homeIcon" routerLink="/"><i class="material-icons">home</i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/mision">Nuestra misión</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/planes">Nuestros Planes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/articulos">Artículos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contacto">Contacto</a>
+      </li>
+      <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="material-icons">person</i> <span class="spanNav">Ingreso Socios</span>
+      </a>
+      <div class="dropdown-menu dropForm" aria-labelledby="navbarDropdown">
+        <div class="dropdown-item">
+          <form [formGroup]="loginForm">
+
+          <input  type="text" class="form-control form-control-sm w100 loginField mr-1"
+                  placeholder="Nombre de usuario"
+                  formControlName="user">
+          <input  type="password" class="form-control form-control-sm w100 loginField mr-1"
+                  placeholder="Contraseña"
+                  formControlName="password">
+          <button class="submitLogin btn btn-assist btn-sm loginField" (click)="login()">INGRESAR</button>
+          </form>
+        </div>
+      </div>
+    </li>
+    </ul>
+  </div>
+  </div>
+</nav>
+<!-- End Navbar -->

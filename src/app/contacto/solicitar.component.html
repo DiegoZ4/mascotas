@@ -1,0 +1,59 @@
+<hr class="mt-0 pt-0">
+<div class="jumbotron jumbotron-fluid mb-5" style="background-image:url(/assets/img/shar.jpg); background-position: center top">
+
+</div>
+<div class="container pb-5">
+  <h1 class="color-assist2">Solicitar plan</h1>
+
+  <div class="p-3 mb-4 mt-4 bg-light text-dark">Envienos su consulta y nos pondremos en contacto con usted.</div>
+
+
+  <div class="alert alert-success" role="alert" *ngIf="response == 0">
+    Hemos recibido su consulta, un miembro de nuestro equipo se pondrá en contacto con usted.
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="response == 2">
+    Ingrese una direcion de E-mail valido.
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="response == 1">
+    Todos los campos son obligatorios.
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="response == 3">
+    Lo sentimos ha ocurrido un error. Pruebe nuevamente más tarde.
+  </div>
+
+  <hr *ngIf="response">
+
+  <form  [formGroup]="contactoForm" >
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Nombre y Apellido</label>
+        <input formControlName = "nombre" type="text" class="form-control" id="inputEmail4" placeholder="Ingrese su nombre">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPlan">Plan</label>
+        <select class="form-control" id="inputPlan" formControlName="plan">
+          <option value=0 selected>Selecciona tu plan favorito</option>
+          <option value=1>AP010</option>
+          <option value=2>AP020</option>
+          <option value=3>AP030</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputAddress">Teléfono</label>
+        <input formControlName = "telefono" type="text" class="form-control" id="inputAddress" placeholder="Ingrese su número de contacto">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputAddress2">E-mail</label>
+        <input formControlName = "email" type="email" class="form-control" id="inputAddress2" placeholder="mail@host.com">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="inputMessage">Mensaje</label>
+      <textarea formControlName = "mensaje"  class="form-control" id="inputMessage" ></textarea>
+    </div>
+    <button type="submit" class="btn btn-assist btn-block" (click)="sendContact()">Enviar</button>
+  </form>
+</div>

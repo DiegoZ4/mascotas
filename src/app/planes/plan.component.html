@@ -1,29 +1,114 @@
+<hr class="mt-0 pt-0">
 <div class="container pt-5">
-  <div class="row">
-    <div class="co-3 mr-5">
-      <div class="plan">
-        <img src="/assets/img/perrito.png" class="imgPlan">
-        <div class="nombrePlan">PLAN A</div>
-      </div>
-      <div class="descPlan" style="text-right">
-        40% de descuento en medicamentos veterinario a domicilio<br><br>
-        15% de descuento en medicamentos en clínica veterinaria
-      </div>
-      <button type="button" name="button" class="btn btn-assist" style="width:200px">Contratar plan al<br> 0810-333-3110</button>
+
+  <!-- CABECERAS DE LOS PLANES -->
+  <div class="row" *ngIf="plan == 1">
+    <div class="col-4 mr-5">
+      <img src="/assets/img/labrador.jpg" class="imgPlan">
     </div>
-    <div class="col-9">
+
+    <div class="col-7 colInfoPlan">
+      <div class="nombrePlanInterior nombrePlanA">PLAN AP010</div>
+      <div class="descPlanInterior" style="text-right">
+        <div class="item">
+            40% de descuento en medicamentos veterinario a domicilio
+        </div>
+        <div class="item">
+            15% de descuento en medicamentos en clínica veterinaria (después de los 3 meses).
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-6">
+            <button type="button" name="button" class="btn btn-assist btnPlan btn-block">Contratar plan al<br> 0810-220-Mascotas(6272)</button>
+        </div>
+        <div class="col-6">
+            <button type="button" routerLink="/solicitar/1" class="btn btn-assist2 btnPlan btn-block">Solicitar Plan <br> Online</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="row" *ngIf="plan == 2">
+    <div class="col-4 mr-5 pt-5">
+      <img src="/assets/img/sharpei.jpg" class="imgPlan">
+    </div>
+
+    <div class="col-7 colInfoPlan">
+      <div class="nombrePlanInterior nombrePlanB">PLAN AP020</div>
+      <div class="descPlanInterior" style="text-right">
+        <div class="item">
+            40% de descuento en medicamentos veterinario a domicilio
+        </div>
+        <div class="item">
+            15% de descuento en medicamentos en clínica veterinaria (después de los 3 meses).
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-6">
+            <button type="button" name="button" class="btn btn-assist btnPlan btn-block">Contratar plan al<br> 0810-220-Mascotas(6272)</button>
+        </div>
+        <div class="col-6">
+            <button type="button" routerLink="/solicitar/2" class="btn btn-assist2 btnPlan btn-block">Solicitar Plan <br> Online</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row" *ngIf="plan == 3">
+    <div class="col-4 mr-5">
+      <img src="/assets/img/boyero.jpg" class="imgPlan">
+    </div>
+
+    <div class="col-7 colInfoPlan">
+      <div class="nombrePlanInterior nombrePlanC">PLAN AP030</div>
+      <div class="descPlanInterior" style="text-right">
+        <div class="item">
+            50% de descuento en medicamentos veterinario a domicilio
+        </div>
+        <div class="item">
+            25% de descuento en medicamentos en clínica veterinaria (después de los 3 meses).
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-6">
+            <button type="button" name="button" class="btn btn-assist btnPlan btn-block">Contratar plan al<br> 0810-220-Mascotas(6272)</button>
+        </div>
+        <div class="col-6">
+            <button type="button" routerLink="/solicitar/3" class="btn btn-assist2 btnPlan btn-block">Solicitar Plan <br> Online</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FIN CABECERAS DE LOS PLANES -->
+
+
+  <hr>
+
+
+  <!-- COMIENZO TABLAS DE LOS PLANES -->
+
+  <div class="row pb-5" *ngIf="plan == 1">
+    <div class="col-12">
       <table class="table table-assist">
         <thead>
           <tr>
             <th scope="col">Prestación por año</th>
-            <th scope="col" width=110 class="cel-assist2 text-center">Cantidad</th>
-            <th scope="col" width=110 class="text-center">Carencia</th>
+            <th scope="col" class="cel-assist2 text-center">Cantidad</th>
+            <th scope="col" class="text-center">Carencia</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>Vacunas</td>
-            <td class="cel-assist2 text-center">2</td>
+            <td class="cel-assist2 text-center">3</td>
             <td class="text-center">-</td>
           </tr>
           <tr>
@@ -123,9 +208,242 @@
           </tr>
         </tbody>
       </table>
-
-
-
     </div>
   </div>
+
+
+  <div class="row pb-5" *ngIf="plan == 2">
+    <div class="col-12">
+      <table class="table table-assist">
+        <thead>
+          <tr>
+            <th scope="col">Prestación por año</th>
+            <th scope="col" class="cel-assist2 text-center">Cantidad</th>
+            <th scope="col" class="text-center">Carencia</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Vacunas</td>
+            <td class="cel-assist2 text-center">5</td>
+            <td class="text-center">-</td>
+          </tr>
+          <tr>
+            <td>Consultas veterinarias domiciliarias</td>
+            <td class="cel-assist2 text-center">12</td>
+            <td class="text-center">-</td>
+          </tr>
+          <tr>
+            <td>Rutina de laboratorio</td>
+            <td class="cel-assist2 text-center">2</td>
+            <td class="text-center">3 meses</td>
+          </tr>
+          <tr>
+            <td>Análisis de materia fecal</td>
+            <td class="cel-assist2 text-center">2</td>
+            <td class="text-center">3 meses</td>
+          </tr>
+          <tr>
+            <td>Consultas con especialistas (Por derivacion)</td>
+            <td class="cel-assist2 text-center">2</td>
+            <td class="text-center">3 meses</td>
+          </tr>
+          <tr>
+            <td>Castración</td>
+            <td class="cel-assist2 text-center">1</td>
+            <td class="text-center">6 meses</td>
+          </tr>
+          <tr>
+            <td>Yesos y Vendajes</td>
+            <td class="cel-assist2 text-center">2</td>
+            <td class="text-center">-</td>
+          </tr>
+          <tr>
+            <td>Radiografías / Ecografías / Electrocardiograma</td>
+            <td class="cel-assist2 text-center">3</td>
+            <td class="text-center">-</td>
+          </tr>
+          <tr>
+            <td>Tomografías</td>
+            <td class="cel-assist2 text-center">1</td>
+            <td class="text-center">6 meses</td>
+          </tr>
+          <tr>
+            <td>Limpieza de dientes c/ultrasonido</td>
+            <td class="cel-assist2 text-center">1</td>
+            <td class="text-center">6 meses</td>
+          </tr>
+          <tr>
+            <td>Cirugías Generales</td>
+            <td class="cel-assist2 text-center">1</td>
+            <td class="text-center">12 meses</td>
+          </tr>
+          <tr>
+            <td>Cirugías traumatologicas</td>
+            <td class="cel-assist2 text-center">1</td>
+            <td class="text-center">12 meses</td>
+          </tr>
+          <tr>
+            <td>Cirugía Centros de Urgencia</td>
+            <td class="cel-assist2 text-center">25%</td>
+            <td class="text-center">12 meses</td>
+          </tr>
+          <tr>
+            <td>Determinaciones especiales de laboratorio</td>
+            <td class="cel-assist2 text-center">1 + 25% dto</td>
+            <td class="text-center">6 meses</td>
+          </tr>
+          <tr>
+            <td>Certificado de salud</td>
+            <td class="cel-assist2 text-center">S/CARGO</td>
+            <td class="text-center">-</td>
+          </tr>
+          <tr>
+            <td>Odontologia ESPECIFICA</td>
+            <td class="cel-assist2 text-center">20%</td>
+            <td class="text-center">12 meses</td>
+          </tr>
+          <tr>
+            <td>Observaciones antirrabicas</td>
+            <td class="cel-assist2 text-center">-</td>
+            <td class="text-center">12 meses</td>
+          </tr>
+          <tr>
+            <td>Endoscopia</td>
+            <td class="cel-assist2 text-center">10%</td>
+            <td class="text-center">12 meses</td>
+          </tr>
+          <tr>
+            <td>Consultas de urgencia x guardia</td>
+            <td class="cel-assist2 text-center">3 (25% dto)</td>
+            <td class="text-center">3 meses</td>
+          </tr>
+          <tr>
+            <td>Internación (días)</td>
+            <td class="cel-assist2 text-center">1 Día S/Cargo 25% Dto.</td>
+            <td class="text-center">12 meses</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="row pb-5" *ngIf="plan == 3">
+    <div class="col-12">
+      <table class="table table-assist">
+        <thead>
+          <tr>
+            <th scope="col">Prestación por año</th>
+            <th scope="col" class="cel-assist2 text-center">Cantidad</th>
+            <th scope="col" class="text-center">Carencia</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Vacunas</td>
+            <td class="cel-assist2 text-center">8</td>
+            <td class="text-center">-</td>
+          </tr>
+          <tr>
+            <td>Consultas veterinarias domiciliarias</td>
+            <td class="cel-assist2 text-center">24</td>
+            <td class="text-center">-</td>
+          </tr>
+          <tr>
+            <td>Rutina de laboratorio</td>
+            <td class="cel-assist2 text-center">3</td>
+            <td class="text-center">3 meses</td>
+          </tr>
+          <tr>
+            <td>Análisis de materia fecal</td>
+            <td class="cel-assist2 text-center">4</td>
+            <td class="text-center">3 meses</td>
+          </tr>
+          <tr>
+            <td>Consultas con especialistas (Por derivacion)</td>
+            <td class="cel-assist2 text-center">3</td>
+            <td class="text-center">3 meses</td>
+          </tr>
+          <tr>
+            <td>Castración</td>
+            <td class="cel-assist2 text-center">1</td>
+            <td class="text-center">6 meses</td>
+          </tr>
+          <tr>
+            <td>Yesos y Vendajes</td>
+            <td class="cel-assist2 text-center">4</td>
+            <td class="text-center">-</td>
+          </tr>
+          <tr>
+            <td>Radiografías / Ecografías / Electrocardiograma</td>
+            <td class="cel-assist2 text-center">4</td>
+            <td class="text-center">-</td>
+          </tr>
+          <tr>
+            <td>Tomografías</td>
+            <td class="cel-assist2 text-center">1**</td>
+            <td class="text-center">6 meses</td>
+          </tr>
+          <tr>
+            <td>Limpieza de dientes c/ultrasonido</td>
+            <td class="cel-assist2 text-center">1**</td>
+            <td class="text-center">6 meses</td>
+          </tr>
+          <tr>
+            <td>Cirugías Generales</td>
+            <td class="cel-assist2 text-center">1**</td>
+            <td class="text-center">12 meses</td>
+          </tr>
+          <tr>
+            <td>Cirugías traumatologicas</td>
+            <td class="cel-assist2 text-center">1**</td>
+            <td class="text-center">12 meses</td>
+          </tr>
+          <tr>
+            <td>Cirugía Centros de Urgencia</td>
+            <td class="cel-assist2 text-center">40%</td>
+            <td class="text-center">12 meses</td>
+          </tr>
+          <tr>
+            <td>Determinaciones especiales de laboratorio</td>
+            <td class="cel-assist2 text-center">2</td>
+            <td class="text-center">6 meses</td>
+          </tr>
+          <tr>
+            <td>Certificado de salud</td>
+            <td class="cel-assist2 text-center">S/CARGO</td>
+            <td class="text-center">-</td>
+          </tr>
+          <tr>
+            <td>Odontologia ESPECIFICA</td>
+            <td class="cel-assist2 text-center">30%</td>
+            <td class="text-center">12 meses</td>
+          </tr>
+          <tr>
+            <td>Observaciones antirrabicas</td>
+            <td class="cel-assist2 text-center">1</td>
+            <td class="text-center">12 meses</td>
+          </tr>
+          <tr>
+            <td>Endoscopia</td>
+            <td class="cel-assist2 text-center">35%</td>
+            <td class="text-center">12 meses</td>
+          </tr>
+          <tr>
+            <td>Consultas de urgencia x guardia</td>
+            <td class="cel-assist2 text-center">1 S/Cargo (+ 3 35% dto)</td>
+            <td class="text-center">3 meses</td>
+          </tr>
+          <tr>
+            <td>Internación (días)</td>
+            <td class="cel-assist2 text-center">3 Día S/Cargo 40% Dto.</td>
+            <td class="text-center">12 meses</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- FIN TABLAS DE LOS PLANES -->
+
 </div>

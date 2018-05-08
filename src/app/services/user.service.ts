@@ -11,7 +11,7 @@ export class UserService {
 
   getPet(user){
 
-    return this.http.get('http://mascotas.com/api/pets/'+user);
+    return this.http.get('http://assistpet.com.ar/api/pets/'+user);
 
   }
 

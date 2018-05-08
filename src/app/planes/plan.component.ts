@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-plan',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlanComponent implements OnInit {
 
-  constructor() { }
+  plan:number;
+
+  constructor(
+    private _activatedRoute:ActivatedRoute
+  ) { }
 
   ngOnInit() {
+    this._activatedRoute.params
+        .subscribe(params =>{
+
+          this.plan = params.id;
+          console.log(this.plan);
+        })
   }
 
 }

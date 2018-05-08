@@ -19,6 +19,6 @@ export class LoginService {
       password:password
     }
 
-    return this.http.post('http://mascotas.com/auth', body, { headers })
+    return this.http.post('http://assistpet.com.ar/auth', body, { headers })
   }
 }
